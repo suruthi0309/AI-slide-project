@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Career247 Slides</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f8f9fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      margin: 0;
+    }
+
+    .card {
+      width: 1000px;
+      min-height: 550px;
+      background-color: #e4ecff;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background-image: 
+        linear-gradient(to right, #e2e3e7 1px, transparent 1px),
+        linear-gradient(to bottom, #e2e3e7 1px, transparent 1px);
+      background-size: 53px 53px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .module-box {
+      background-color: #337ef0;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    .extra-label {
+      background-color: #fff;
+      color: #1e90ff;
+      border: 2px solid #1e90ff;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 15px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .logo img {
+      width: 130px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+    }
+
+    .left {
+      width: 55%;
+    }
+
+    .title-up {
+      margin-top: -25px;
+    }
+
+    h1, h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    h1 span, h2 span {
+      color: #337ef0;
+    }
+
+    .illustration img {
+      width: 350px;
+      height: auto;
+    }
+
+    .points {
+      margin-top: 20px;
+    }
+
+    .point {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    .number.small {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      background-color: #337ef0;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+    }
+
+    .number.large {
+      width: 70px;
+      height: 70px;
+      font-size: 26px;
+      background-color: #337ef0;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #333;
+      width: 85%;
+    }
+
+    .cyber-threats {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+      align-items: center;
+    }
+
+    .threat-row {
+      display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+    }
+
+    .threat-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+    }
+
+    .circle-icon {
+      width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .circle-icon img {
+      width: 42px;
+      height: 42px;
+    }
+
+    .label {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      color: #000;
+    }
+    .cyber-threats {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+}
+/* Dotted vertical lines */
+.vertical-line {
+  position: absolute;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, #aaa, #aaa 4px, transparent 4px, transparent 8px);
+  top: 100px;
+  bottom: 100px;
+  z-index: 0;
+}
+
+.line1 {
+  left: 33.3%;
+}
+
+.line2 {
+  left: 66.6%;
+}
+
+    .blue-bg { background-color: #1e6be8; }
+    .dark-bg { background-color: #1f1e1e; }
+
+    .footer {
+      font-size: 14px;
+      color: #555;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    [contenteditable="true"] {
+      border-bottom: 1px dashed transparent;
+      cursor: text;
+    }
+
+    [contenteditable="true"]:focus {
+      outline: none;
+      border-bottom: 1px dashed #337ef0;
+      background: #f0f8ff;
+    }
+
+    .phishing-layout {
+      padding: 10px;
+  background: transparent;
+    }
+    .phishing-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+    .side-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .side-module {
+      background-color: #1e90ff;
+      color: white;
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .module-btn {
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .phishing-content {
+      flex: 1;
+    }
+
+    .phishing-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0070dd;
+      margin-bottom: 20px;
+    }
+    .module-title {
+  border: 2px solid #1e90ff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  color: #1e90ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+    .phishing-points-row {
+      display: flex;
+      gap: 40px;
+    }
+    .phishing-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+    .phishing-point {
+     display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 0;
+     
+    }
+
+    .circle-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px; /* Now equal to width */
+  border: 2px solid #007BFF;
+  color: #007BFF;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(23, 53, 85, 0.2);
+}
+
+
+.phishing-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+
+
+    .phishing-text {
+        font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  font-weight: normal;
+    }
+    .phishing-card {
+  background-color:transparent;
+  border-radius: 0;
+  padding: 40px;
+  box-shadow:none;
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.slide-title {
+   font-size: 24px;
+  font-weight: 700;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+.challenge{
+  color: #000;
+}
+  </style>
+</head>
+<body>
+
+{% for slide in slides %}
+<div class="card" data-slide="{{ loop.index0 }}">
+  <div class="header">
+    <div>
+      <span class="module-box" contenteditable="true" data-field="module">{{ slide.module }}</span>
+      {% if slide.extra_label %}
+        <span class="extra-label" contenteditable="true" data-field="extra_label">{{ slide.extra_label }}</span>
+      {% endif %}
+    </div>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+    </div>
+  </div>
+
+  {% if slide.type == "intro" %}
+  <div class="content">
+    <div class="left">
+      <h1><span contenteditable="true" data-field="title">{{ slide.title }}</span></h1>
+      <div class="points">
+        {% for point in slide.points %}
+        <div class="point">
+          <div class="number small">{{ loop.index }}</div>
+          <div class="text" contenteditable="true" data-field="point-{{ loop.index0 }}">{{ point }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='images/images2.png') }}" alt="Image">
+    </div>
+  </div>
+
+  {% elif slide.type == "growth" %}
+  <div class="content">
+    <div class="left">
+      <h1 class="title-up">
+        <span class="blue-text" contenteditable="true" data-field="title">{{ slide.title }}</span>
+        <span class="blue-text" contenteditable="true" data-field="highlight">{{ slide.highlight }}</span>
+      </h1>
+      <div class="points">
+        {% for point in slide.points %}
+        <div class="point">
+          <div class="number large">{{ loop.index }}</div>
+          <div class="text" contenteditable="true" data-field="point-{{ loop.index0 }}">{{ point }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='images/images3.png') }}" alt="Image">
+    </div>
+  </div>
+
+  {% elif slide.type == "cyber" %}
+  <div class="content">
+    <div class="left">
+      <h1>
+        <span class="blue-text" contenteditable="true" data-field="title">{{ slide.title }}</span>
+        <span class="blue-text" contenteditable="true" data-field="highlight">{{ slide.highlight }}</span>
+      </h1>
+      <div class="points">
+        {% for point in slide.points %}
+        <div class="point">
+          <img class="icon" src="{{ url_for('static', filename='images/icon' ~ loop.index|string ~ '.png') }}" alt="Icon">
+          <div class="text" contenteditable="true" data-field="point-{{ loop.index0 }}">{{ point }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='images/images4.png') }}" alt="Image">
+    </div>
+  </div>
+
+  {% elif slide.type == "threats" %}
+  <div class="content">
+    <div class="left">
+      <h1><span class="blue-text" contenteditable="true" data-field="title">{{ slide.title }}</span></h1>
+      <div class="cyber-threats">
+        {% for row in [0, 1] %}
+        <div class="threat-row">
+          {% for col in range(3) %}
+          {% set index = row * 3 + col %}
+          <div class="threat-block">
+            <div class="circle-icon {{ 'blue-bg' if index % 2 == 0 else 'dark-bg' }}">
+              <img src="{{ url_for('static', filename='images/threat' ~ (index + 1)|string ~ '.png') }}" alt="Threat Icon">
+            </div>
+            <div class="label" contenteditable="true" data-field="threat-{{ index }}">{{ slide.threats[index] }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        <!-- Dotted lines between columns -->
+      <div class="vertical-line line1"></div>
+      <div class="vertical-line line2"></div>
+      </div>
+    </div>
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='images/images5.png') }}" alt="Image">
+    </div>
+  </div>
+
+ {% elif slide.type == "phishing_details" %}
+<div class="slide-card phishing-card">
+ 
+
+ <h1 class="slide-title" contenteditable="true" data-field="title">{{ slide.title }}</h1>
+
+<div class="phishing-points">
+  <div class="phishing-point">
+    <div class="circle-number">1</div>
+    <div class="phishing-text" contenteditable="true" data-field="point1">{{ slide.point1 }}</div>
+  </div>
+
+  <div class="phishing-point">
+    <div class="circle-number">2</div>
+    <div class="phishing-text" contenteditable="true" data-field="point2">{{ slide.point2 }}</div>
+  </div>
+</div>
+</div>
+{% elif slide.type == "phishing_working" %}
+<div class="slide-phishing_working">
+
+
+  <!-- Title -->
+  <h1 contenteditable="true" data-field="title" style="font-size: 28px; color: #007bff; font-weight: 700; margin-bottom: 30px;">
+    {{ slide.title }}
+  </h1>
+
+  <!-- Items List -->
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    {% for item in slide["items"] %}
+    <div style="display: flex; align-items: stretch; border-radius: 10px; overflow: hidden;">
+      <div contenteditable="true" data-field="label{{ loop.index }}" style="background-color: #007bff; color: white; padding: 14px 16px; font-weight: bold; width: 280px; font-size: 15px;">
+        {{ item.label }}
+      </div>
+      <div contenteditable="true" data-field="desc{{ loop.index }}" style="background-color: #dceeff; color: #000; padding: 14px 16px; flex: 1; font-size: 15px; line-height: 1.5;">
+        {{ item.description }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!--9th slide-->
+
+ {% elif slide.type == "malware_ransomware" %}
+<div data-slide="{{ loop.index0 }}" style="padding: 40px; position: relative;">
+
+  <!-- Title -->
+  <h1 contenteditable="true" data-field="title"
+      style="font-size: 36px; color: #007bff; font-weight: 800; margin-bottom: 30px;">
+    {{ slide.title }}
+  </h1>
+
+  <!-- Content and Image Row -->
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 50px; flex-wrap: wrap;">
+
+    <!-- Left: Items with Icons -->
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 30px;">
+      {% for item in slide["items"] %}
+      <div style="display: flex; align-items: flex-start; gap: 16px;">
+        <img src="{{ url_for('static', filename='images/icon' ~ loop.index ~ '.png') }}" alt="icon{{ loop.index }}"
+             style="width: 42px; height: 42px;" />
+        <div contenteditable="true" data-field="text{{ loop.index }}"
+             style="font-size: 18px; color: #111; line-height: 1.6;">
+          {{ item.text }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Right: Ransomware Image -->
+    <div style="flex: 1; min-width: 320px; text-align: center;">
+      <img src="{{ url_for('static', filename='images/images6.png') }}" alt="Ransomware Illustration"
+           style="max-width: 100%; height: auto;" />
+    </div>
+  </div>
+</div>
+
+{% elif slide.type == "man_in_the_middle" %}
+<div data-slide="{{ loop.index0 }}">
+   
+
+
+  <!-- Title -->
+  <h1 contenteditable="true" data-field="title"
+      style="font-size: 36px; font-weight: bold; color: #007bff; margin-bottom: 40px;">
+    {{ slide.title }}
+  </h1>
+
+  <!-- Cards Grid -->
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+    {% for item in slide["items"] %}
+    <div style="background-color: white; border-radius: 20px; padding: 24px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 6px 12px rgba(0,0,0,0.08);">
+      
+      <div style="background-color: #007bff; color: white; font-weight: bold; font-size: 20px; border-radius: 50%; min-width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+        {{ loop.index }}
+      </div>
+
+      <!-- Text -->
+      <div contenteditable="true" data-field="text{{ loop.index }}" style="font-size: 16px; color: #111; line-height: 1.5;">
+        {{ item.text }}
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!--10th skide-->
+{% elif slide.type == "data_breaches" %}
+<div data-slide="{{ loop.index0 }}" style="padding: 40px; position: relative;">
+
+ 
+
+  <!-- Title -->
+  <h1 contenteditable="true" data-field="title"
+      style="font-size: 36px; font-weight: 800; color: #007bff; margin-bottom: 40px;">
+    {{ slide.title }}
+  </h1>
+
+  <!-- Content Layout -->
+  <div style="display: flex; justify-content: space-between; gap: 50px; flex-wrap: wrap;">
+
+    <!-- Left: Numbered Items -->
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 40px;">
+      {% for item in slide["items"] %}
+      <div style="display: flex; align-items: flex-start; gap: 16px;">
+        <!-- Circle Number -->
+        <div style="background: white; border: 6px solid #007bff; color: #007bff; border-radius: 50%; width: 48px; height: 48px; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+          {{ "%02d" % loop.index }}
+        </div>
+
+        <!-- Item Text -->
+        <div contenteditable="true" data-field="text{{ loop.index }}"
+             style="font-size: 18px; line-height: 1.6; color: #111;">
+          {{ item.text }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Right: Illustration -->
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="{{ url_for('static', filename='images/images7.png') }}"
+           alt="Phishing Image"
+           style="max-width: 100%; height: auto;" />
+    </div>
+  </div>
+</div>
+<!--11th slides-->
+
+{% elif slide.type == "fraud_prevention" %}
+<div data-slide="{{ loop.index0 }}" style="padding: 40px; position: relative;">
+
+  <!-- Title -->
+  <h1 contenteditable="true" data-field="title"
+      style="font-size: 36px; font-weight: 800; color: #007bff; margin-bottom: 40px;">
+    {{ slide.title }}
+  </h1>
+
+  <!-- Content Wrapper -->
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; align-items: center;">
+
+    <!-- Left Section (Icons & Texts) -->
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: row; justify-content: center; gap: 40px;">
+
+      {% for item in slide["items"] %}
+      <div style="flex: 1; text-align: center; max-width: 300px;">
+
+        <!-- Icon -->
+        <div style="width: 64px; height: 64px; border-radius: 50%; background-color: #007bff; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+          <img src="{{ url_for('static', filename='images/icon3.png') }}" alt="icon" style="width: 32px; height: 32px;">
+        </div>
+
+        <!-- Description -->
+        <div contenteditable="true" data-field="text{{ loop.index }}" style="font-size: 16px; line-height: 1.6; color: #000;">
+          {{ item.text }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Right Image -->
+    <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+      <img src="{{ url_for('static', filename='images/images8.png') }}" alt="Fraud Image"
+           style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+</div>
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------->
+
+  {% else %}
+  <div class="content">
+    <div class="text">
+      <h1>
+        <span  class="challenge"contenteditable="true" data-field="title">{{ slide.title }}</span>
+        <span contenteditable="true" data-field="highlight">{{ slide.highlight }}</span>
+      </h1>
+    </div>
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='images/images1.png') }}" alt="Image">
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="footer">Private and Confidential © Career247</div>
+</div>
+{% endfor %}
+
+<script>
+document.querySelectorAll('[contenteditable="true"]').forEach(el => {
+  el.addEventListener('blur', () => {
+    const slideIndex = el.closest('.card').dataset.slide;
+    const field = el.dataset.field;
+    const newValue = el.innerText.trim();
+
+    fetch('/update-slide', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slideIndex, field, newValue })
+    }).then(res => res.json())
+    .then(data => console.log('Updated:', data));
+  });
+});
+</script>
+
+</body>
+</html>
